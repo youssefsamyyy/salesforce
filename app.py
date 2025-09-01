@@ -6,9 +6,9 @@ app = Flask(__name__)
 
 # Database connection info from environment variables
 DB_USER = os.getenv("DB_USER", "root")
-DB_PASS = os.getenv("DB_PASS", "")
-DB_NAME = os.getenv("DB_NAME", "")
-INSTANCE_CONNECTION_NAME = os.getenv("INSTANCE_CONNECTION_NAME", "")
+DB_PASS = os.getenv("DB_PASS", "Cloud11@2025")
+DB_NAME = os.getenv("DB_NAME", "testing")
+INSTANCE_CONNECTION_NAME = os.getenv("INSTANCE_CONNECTION_NAME", "madina-432911:us-central1:salesforce-testing")
 
 # Function to get a connection to Cloud SQL
 def get_connection():
