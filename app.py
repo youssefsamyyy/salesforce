@@ -31,9 +31,10 @@ def home():
 
 # Donations route
 @app.route("/Donations", methods=["GET"])
+@app.route("/Donations", methods=["GET"])
 def donations():
     query = """
-        SELECT owneridname, new_donationamount, new_donationsourcename, new_donationstatusname
+        SELECT DonorID, DonorName, DonationAmount, DonationDate, PaymentMethod, Notes
         FROM donations
         LIMIT 10
     """
@@ -53,7 +54,7 @@ def donations():
 @app.route("/Activities", methods=["GET"])
 def activities():
     query = """
-        SELECT owneridname, actualstart, actualend
+        SELECT ID, ActivityName, ActivityDate, Location, Organizer, Participants, Notes
         FROM activities
         LIMIT 10
     """
